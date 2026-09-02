@@ -1,0 +1,29 @@
+{
+  "version": "2.6.2",
+  "release_version": "1.0",
+  "released_at": "2026-09-02",
+  "summary": {
+    "title": "Ransomware Attack Threat Model",
+    "owner": "Lasya Danda",
+    "description": "This threat model analyzes a ransomware attack scenario, including initial access, lateral movement, privilege escalation, data access, ransomware deployment, and system recovery.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Ransomware Attack Flow",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [],
+        "description": "STRIDE threat model for analyzing a ransomware attack, including initial access, lateral movement, privilege escalation, data access, ransomware deployment, and recovery."
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Lasya Danda",
+    "threatTop": 0
+  }
+}
