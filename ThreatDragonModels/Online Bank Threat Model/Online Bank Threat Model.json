@@ -20,34 +20,6 @@
         "version": "2.6.2",
         "cells": [
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": -1,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Restricted Network",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Restricted Network"
-            ],
-            "id": "9953f79e-87c5-460d-bebf-128df9f259cd",
-            "source": {
-              "x": 700,
-              "y": -10
-            },
-            "target": {
-              "x": 800,
-              "y": 90
-            }
-          },
-          {
             "position": {
               "x": 435,
               "y": -10
@@ -68,6 +40,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -151,7 +124,6 @@
               ]
             },
             "id": "ed20962a-eda1-4afc-b51e-c49890cdac1e",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Public Website",
@@ -188,6 +160,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -271,7 +244,6 @@
               ]
             },
             "id": "43504cc8-196f-4494-9333-6f1b3f4432c0",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Authentication",
@@ -308,6 +280,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -391,7 +364,6 @@
               ]
             },
             "id": "056bafea-3fdb-48ad-9d56-1ebb5d476e4f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Transactions",
@@ -428,6 +400,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -511,7 +484,6 @@
               ]
             },
             "id": "5ce02a5b-5783-47c7-8c3e-8e7d06e827f3",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Website Dev",
@@ -545,6 +517,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -628,7 +601,6 @@
               ]
             },
             "id": "fe83502f-24bf-4289-9901-d762459c26f2",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
               "name": "Visitor",
@@ -662,6 +634,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -745,7 +718,6 @@
               ]
             },
             "id": "d8e144c3-d57f-49ff-8795-f1c37f539802",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -760,8 +732,8 @@
           },
           {
             "position": {
-              "x": 746,
-              "y": 50
+              "x": 886,
+              "y": 30
             },
             "size": {
               "width": 120,
@@ -782,6 +754,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -865,7 +838,6 @@
               ]
             },
             "id": "69b18aa3-dd43-4719-81fa-013138c6d9ea",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "Public Webpages",
@@ -884,8 +856,8 @@
           },
           {
             "position": {
-              "x": 746,
-              "y": 210
+              "x": 926,
+              "y": 195
             },
             "size": {
               "width": 120,
@@ -906,6 +878,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -989,7 +962,6 @@
               ]
             },
             "id": "00eae082-3799-44da-aa58-956e27465955",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "Authentication Database",
@@ -1008,7 +980,7 @@
           },
           {
             "position": {
-              "x": 746,
+              "x": 966,
               "y": 340
             },
             "size": {
@@ -1030,6 +1002,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1113,7 +1086,6 @@
               ]
             },
             "id": "7fb2e548-7c0d-4a60-a05c-3064d3d41475",
-            "zIndex": 9,
             "data": {
               "type": "tm.Store",
               "name": "Transaction Database",
@@ -1598,7 +1570,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "HTTP Request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1612,7 +1584,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "HTTP Request"
             ],
             "id": "dde42ec3-0304-4a09-9a0a-e2f664978530",
             "source": {
@@ -1847,187 +1819,41 @@
             "target": {
               "x": 250,
               "y": 450
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 12,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Restricted Network",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Restricted Network"
+            ],
+            "id": "9953f79e-87c5-460d-bebf-128df9f259cd",
+            "source": {
+              "x": 690,
+              "y": -40
+            },
+            "target": {
+              "x": 740,
+              "y": 460
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 10
+              }
+            ]
           }
         ],
         "description": "e-bank STRIDE"
