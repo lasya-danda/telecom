@@ -20,6 +20,40 @@
         "version": "2.6.2",
         "cells": [
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Restricted Network",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Restricted Network"
+            ],
+            "id": "1910b823-56ad-4e8f-a72b-5bf1a0a51cdb",
+            "source": {
+              "x": 880,
+              "y": -120
+            },
+            "target": {
+              "x": 870,
+              "y": 440
+            },
+            "vertices": [
+              {
+                "x": 870,
+                "y": 10
+              }
+            ]
+          },
+          {
             "position": {
               "x": 435,
               "y": -10
@@ -381,8 +415,8 @@
           },
           {
             "position": {
-              "x": 100,
-              "y": 30
+              "x": 20,
+              "y": 20
             },
             "size": {
               "width": 112.5,
@@ -393,8 +427,8 @@
                 "text": "Website Dev"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -491,14 +525,32 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "989095c1-8e79-41ef-948f-22eba790536f",
+                  "title": "User Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Threat actors impersonate legitimate users to\ngain unauthorized access",
+                  "mitigation": "-Implement strong multi-factor authentication (MFA)\nmechanisms to verify user identities\n-Use CAPTCHA to prevent automated attacks\n-Regularly update authentication tokens\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
             }
           },
           {
             "position": {
-              "x": 111,
+              "x": 31,
               "y": 210
             },
             "size": {
@@ -615,7 +667,7 @@
           },
           {
             "position": {
-              "x": 111,
+              "x": 41,
               "y": 340
             },
             "size": {
@@ -868,11 +920,13 @@
                 "text": "Authentication Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -969,13 +1023,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "a38f0031-dc6d-47af-93e4-2b6301d9b0b9",
+                  "title": "Data Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attackers modify or manipulate stored data\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1422,52 +1496,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web Transaction Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Web Transaction Request"
-            ],
-            "id": "da94c05f-a2b5-4d18-b5b6-c19182a4cbfc",
-            "source": {
-              "x": 224,
-              "y": 361
-            },
-            "target": {
-              "cell": "056bafea-3fdb-48ad-9d56-1ebb5d476e4f",
-              "port": "b34323b8-5476-484a-afb3-3c2a926b1249"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "DB Transaction Request",
               "description": "",
               "outOfScope": false,
@@ -1498,63 +1526,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Web Transaction Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Web Transaction Response"
-            ],
-            "id": "43059f76-713f-4393-8e0d-c1e66dce69be",
-            "source": {
-              "x": 220,
-              "y": 370
-            },
-            "target": {
-              "cell": "056bafea-3fdb-48ad-9d56-1ebb5d476e4f",
-              "port": "7b99c83d-de37-40d6-a336-3b86fd987a06"
-            },
-            "vertices": [
-              {
-                "x": 350,
-                "y": 470
-              },
-              {
-                "x": 350,
-                "y": 450
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1575,13 +1548,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "b2d35dcd-d19f-4de6-a4b0-0bd4a82ea444",
+                  "title": "HTTP Request Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attackers manipulate HTTP requests",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "HTTP Request"
@@ -1595,7 +1587,36 @@
               "cell": "ed20962a-eda1-4afc-b51e-c49890cdac1e",
               "port": "7b99c83d-de37-40d6-a336-3b86fd987a06"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 240,
+                "y": 170
+              },
+              {
+                "x": 260,
+                "y": 150
+              },
+              {
+                "x": 290,
+                "y": 150
+              },
+              {
+                "x": 290,
+                "y": 110
+              },
+              {
+                "x": 310,
+                "y": 130
+              },
+              {
+                "x": 370,
+                "y": 130
+              },
+              {
+                "x": 440,
+                "y": 100
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1751,7 +1772,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1772,13 +1794,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "f6aef1b5-2151-4dd9-b02b-7a2992ee02b9",
+                  "title": "HTTP Response Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attackers manipulate HTTP responses",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "HTTP Response"
@@ -1791,7 +1832,136 @@
             "target": {
               "cell": "fe83502f-24bf-4289-9901-d762459c26f2",
               "port": "ccda964c-98fd-4304-8599-f74def65c490"
-            }
+            },
+            "vertices": [
+              {
+                "x": 280,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Transaction Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4f4dad93-d995-453d-a6a4-e309b2380dce",
+                  "title": "Data Exposed",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data is intercepted or exposed during\ntransmission",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Web Transaction Response"
+            ],
+            "id": "43059f76-713f-4393-8e0d-c1e66dce69be",
+            "source": {
+              "cell": "d8e144c3-d57f-49ff-8795-f1c37f539802",
+              "port": "ccda964c-98fd-4304-8599-f74def65c490"
+            },
+            "target": {
+              "cell": "056bafea-3fdb-48ad-9d56-1ebb5d476e4f",
+              "port": "7b99c83d-de37-40d6-a336-3b86fd987a06"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 470
+              },
+              {
+                "x": 350,
+                "y": 450
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Transaction Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Web Transaction Request"
+            ],
+            "id": "da94c05f-a2b5-4d18-b5b6-c19182a4cbfc",
+            "source": {
+              "cell": "d8e144c3-d57f-49ff-8795-f1c37f539802",
+              "port": "ccda964c-98fd-4304-8599-f74def65c490"
+            },
+            "target": {
+              "cell": "056bafea-3fdb-48ad-9d56-1ebb5d476e4f",
+              "port": "b34323b8-5476-484a-afb3-3c2a926b1249"
+            },
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
@@ -1813,45 +1983,17 @@
             ],
             "id": "b19a939e-9a9b-4781-b481-d9827f213a1a",
             "source": {
-              "x": 260,
-              "y": -10
+              "x": 200,
+              "y": -20
             },
             "target": {
-              "x": 250,
-              "y": 450
-            }
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 12,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Restricted Network",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Restricted Network"
-            ],
-            "id": "9953f79e-87c5-460d-bebf-128df9f259cd",
-            "source": {
-              "x": 690,
-              "y": -40
-            },
-            "target": {
-              "x": 740,
+              "x": 210,
               "y": 460
             },
             "vertices": [
               {
-                "x": 730,
-                "y": 10
+                "x": 210,
+                "y": 110
               }
             ]
           }
@@ -1861,6 +2003,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Cybersecurity Architect",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
