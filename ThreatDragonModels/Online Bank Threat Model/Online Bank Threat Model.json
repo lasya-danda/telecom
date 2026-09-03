@@ -1561,7 +1561,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Attackers manipulate HTTP requests",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "-Implement input validation and output encoding\n-Use web application firewalls (WAFs)\n-Follow secure coding practices",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
@@ -1570,7 +1570,7 @@
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -1834,6 +1834,10 @@
               "port": "ccda964c-98fd-4304-8599-f74def65c490"
             },
             "vertices": [
+              {
+                "x": 290,
+                "y": 180
+              },
               {
                 "x": 280,
                 "y": 190
