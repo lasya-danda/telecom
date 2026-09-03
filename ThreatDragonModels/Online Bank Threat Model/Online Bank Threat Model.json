@@ -663,6 +663,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1037,7 +1044,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Attackers modify or manipulate stored data\n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "-Use encryption to protect data at rest\n-Employ integrity checks to detect tampering\n-Restrict access to authorized personnel only",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -1045,7 +1052,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
@@ -1887,7 +1894,7 @@
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Sensitive data is intercepted or exposed during\ntransmission",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "-Use encryption for data in transit\n-Avoid sending sensitive data in URL parameters\n- Restrict access to authorized personnel only\nand URL parameters",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
@@ -1897,7 +1904,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 4,
                 "denialOfService": 0
               }
             },
@@ -1915,6 +1922,10 @@
             },
             "vertices": [
               {
+                "x": 240,
+                "y": 410
+              },
+              {
                 "x": 260,
                 "y": 430
               },
@@ -1931,7 +1942,7 @@
                 "y": 450
               },
               {
-                "x": 450,
+                "x": 470,
                 "y": 450
               }
             ]
